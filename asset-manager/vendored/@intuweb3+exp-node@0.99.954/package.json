@@ -1,0 +1,21 @@
+{
+  "name": "@intuweb3/exp-node",
+  "version": "0.99.954",
+  "description": "INTU SDK",
+  "main": "lib/index.js",
+  "module": "lib/index.js",  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@ethersproject/abstract-provider": "^5.7.0",
+    "@ethersproject/abstract-signer": "^5.7.0",
+    "@noble/hashes": "^1.6.1",
+    "@noble/secp256k1": "^2.1.0",
+    "graphql-request": "^7.1.2",
+    "nostr-tools": "^2.10.4",
+    "viem": "^2.21.55",
+    "ws": "^8.18.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

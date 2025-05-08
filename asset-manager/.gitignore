@@ -3,6 +3,8 @@
 !contracts
 !src
 
+!vendored
+
 !deno.json
 !deno.lock
 !.env.sample

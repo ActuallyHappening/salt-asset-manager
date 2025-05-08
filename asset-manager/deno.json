@@ -2,4 +2,5 @@
   "tasks": {
     "start": "deno run -A src/index.ts"
   },
+  "vendor": true,
 }
