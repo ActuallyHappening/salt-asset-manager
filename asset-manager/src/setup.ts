@@ -4,11 +4,11 @@ import {
   getUserRegistrationAllInfos,
   preRegistration,
   registerAllSteps,
-} from "@intuweb3/exp-node";
-import { ethers } from "ethers";
-import { askForInput } from "./helpers";
-import { orchestration_network_provider, signer } from "./constants";
-import { getUserIndex } from "@intuweb3/exp-node/lib/services/web3/utils";
+} from "npm:@intuweb3/exp-node";
+import { ethers } from "npm:ethers";
+import { askForInput } from "./helpers.ts";
+import { orchestration_network_provider, signer } from "./constants.ts";
+// import { getUserIndex } from "npm:@intuweb3/exp-node/lib/services/web3/utils.js";
 
 const preRegisterBot = async (
   accountAddress: string,
@@ -43,54 +43,54 @@ const preRegisterBot = async (
   }
 };
 
-const registerBot = async (
-  accountAddress: string,
-  bot: ethers.Signer,
-  provider: ethers.providers.JsonRpcProvider,
-) => {
-  const botAddress = await bot.getAddress();
-  try {
-    const botIdx = await getUserIndex(accountAddress, botAddress, provider);
-    const registerAllInfo = await getUserRegistrationAllInfos(
-      accountAddress,
-      provider,
-    );
+// const registerBot = async (
+//   accountAddress: string,
+//   bot: ethers.Signer,
+//   provider: ethers.providers.JsonRpcProvider,
+// ) => {
+//   const botAddress = await bot.getAddress();
+//   try {
+//     const botIdx = await getUserIndex(accountAddress, botAddress, provider);
+//     const registerAllInfo = await getUserRegistrationAllInfos(
+//       accountAddress,
+//       provider,
+//     );
 
-    console.log("the bot idx is " + botIdx);
-    console.log(registerAllInfo);
+//     console.log("the bot idx is " + botIdx);
+//     console.log(registerAllInfo);
 
-    if (
-      registerAllInfo[botIdx] !== null &&
-      registerAllInfo[botIdx].registered
-    ) {
-      console.log("The asset manager bot has already been registered");
-      return;
-    }
-    console.log("automaticRegistration:start");
-    // open the nostr db connection
-    await automateRegistration(
-      accountAddress,
-      bot,
-      // https://docs.intu.xyz/intu-sdk-functions/core-functionality/automateregistration/#parameters
-      "wss://relay.nostrdice.com" as any,
-    );
+//     if (
+//       registerAllInfo[botIdx] !== null &&
+//       registerAllInfo[botIdx].registered
+//     ) {
+//       console.log("The asset manager bot has already been registered");
+//       return;
+//     }
+//     console.log("automaticRegistration:start");
+//     // open the nostr db connection
+//     await automateRegistration(
+//       accountAddress,
+//       bot,
+//       // https://docs.intu.xyz/intu-sdk-functions/core-functionality/automateregistration/#parameters
+//       "wss://relay.nostrdice.com" as any,
+//     );
 
-    console.log("automaticRegistration:success");
+//     console.log("automaticRegistration:success");
 
-    console.log("registerAllSteps:start");
+//     console.log("registerAllSteps:start");
 
-    const tx = (await registerAllSteps(
-      accountAddress,
-      bot,
-    )) as ethers.ContractTransaction;
+//     const tx = (await registerAllSteps(
+//       accountAddress,
+//       bot,
+//     )) as ethers.ContractTransaction;
 
-    await tx.wait();
+//     await tx.wait();
 
-    console.log("registerAllSteps:success");
-  } catch (err) {
-    console.log("register:failure", err);
-  }
-};
+//     console.log("registerAllSteps:success");
+//   } catch (err) {
+//     console.log("register:failure", err);
+//   }
+// };
 
 /**
  * the setup function allows one to join the account creation process initiated on the SALT web app.

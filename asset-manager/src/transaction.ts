@@ -1,12 +1,12 @@
-import { BigNumber, ContractTransaction, ethers } from "ethers";
-import { askForInput } from "./helpers";
+import { BigNumber, ContractTransaction, ethers } from "npm:ethers";
+import { askForInput } from "./helpers.ts";
 import {
   getVaultsWithoutTransactions,
   signTx,
   submitTransaction,
-} from "@intuweb3/exp-node";
-import { broadcasting_network_provider, signer } from "./constants";
-import env from "./env";
+} from "npm:@intuweb3/exp-node";
+import { broadcasting_network_provider, signer } from "./constants.ts";
+import env from "./env.ts";
 
 /** Will ask using stdin for missing arguments if not provided */
 export async function transaction(

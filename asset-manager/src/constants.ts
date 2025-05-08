@@ -1,5 +1,5 @@
-import { ethers } from "ethers";
-import env from "./env";
+import { ethers } from "npm:ethers";
+import env from "./env.ts";
 
 export const orchestration_network_provider =
 	new ethers.providers.StaticJsonRpcProvider({

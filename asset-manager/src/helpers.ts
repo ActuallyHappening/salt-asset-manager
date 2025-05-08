@@ -1,4 +1,4 @@
-import * as readline from "readline";
+import * as readline from "npm:readline";
 
 // Create an interface for reading input from the terminal
 export const rl = readline.createInterface({

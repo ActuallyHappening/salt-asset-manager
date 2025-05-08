@@ -2,11 +2,9 @@
 
 !contracts
 !src
+
+!deno.json
+!deno.lock
 !.env.sample
-!package.json
-!package-lock.json
 !README.md
-!tsconfig.json
-#!webpack.config.js
-!rspack.config.js
 !.gitignore

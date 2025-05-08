@@ -1,8 +1,8 @@
-import { signer } from "./constants";
-import { askForInput, printRectangle, rl } from "./helpers";
-import { approve, deposit, withdraw } from "./strategy/aave/aave";
-import { transaction } from "./transaction";
-import { handleCLIArgs } from "./cli";
+import { signer } from "./constants.ts";
+import { askForInput, printRectangle, rl } from "./helpers.ts";
+import { approve, deposit, withdraw } from "./strategy/aave/aave.ts";
+import { transaction } from "./transaction.ts";
+import { handleCLIArgs } from "./cli.ts";
 
 (async () => {
 	const publicAddress = await signer.getAddress();

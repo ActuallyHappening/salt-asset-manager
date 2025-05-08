@@ -1,7 +1,7 @@
 //! Provides a type-safe and checked access to expected environment variables
 //! Also, loads these from a .env file
 
-import * as dotenv from "dotenv";
+import * as dotenv from "npm:dotenv";
 
 dotenv.config();
 

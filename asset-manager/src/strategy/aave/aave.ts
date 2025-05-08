@@ -1,14 +1,14 @@
-import { BigNumber, ContractTransaction, ethers } from "ethers";
-import { askForInput } from "../../helpers";
+import { BigNumber, ContractTransaction, ethers } from "npm:ethers";
+import { askForInput } from "../../helpers.ts";
 import {
   getVaultsWithoutTransactions,
   signTx,
   submitTransaction,
-} from "@intuweb3/exp-node";
-import { broadcasting_network_provider, signer } from "../../constants";
-import WrappedTokenGatewayV3 from "../../../contracts/Protocols/Aave/abi/WrappedTokenGatewayV3.json";
-import ERC20 from "../../../contracts/ERC20/abi/ERC20.json";
-import env from "../../env";
+} from "npm:@intuweb3/exp-node";
+import { broadcasting_network_provider, signer } from "../../constants.ts";
+import WrappedTokenGatewayV3 from "../../../contracts/Protocols/Aave/abi/WrappedTokenGatewayV3.json" with { type: "json" };
+import ERC20 from "../../../contracts/ERC20/abi/ERC20.json" with { type: "json"};
+import env from "../../env.ts";
 
 const aETHWETHContractAddress = "0x5b071b590a59395fE4025A0Ccc1FcC931AAc1830";
 const WrappedTokenGatewayV3ContractAddress =

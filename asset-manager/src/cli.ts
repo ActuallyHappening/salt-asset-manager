@@ -1,6 +1,6 @@
-import argsObj from "command-line-parser";
-import { transaction } from "./transaction";
-import { rl } from "./helpers";
+import argsObj from "npm:command-line-parser";
+import { transaction } from "./transaction.ts";
+import { rl } from "./helpers.ts";
 
 export async function handleCLIArgs(): Promise<boolean> {
   let args = argsObj();
