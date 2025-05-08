@@ -1,3 +1,0 @@
-export { Address__factory } from "./Address__factory";
-export { Create2__factory } from "./Create2__factory";
-export { Errors__factory } from "./Errors__factory";
