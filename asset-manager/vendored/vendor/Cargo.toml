@@ -7,4 +7,8 @@ edition = "2024"
 camino = "1.1.9"
 clap = { version = "4.5.37", features = ["derive"] }
 swc_common = { version = "9.1.0", features = ["tty-emitter"] }
+swc_ecma_ast = "9.0.0"
 swc_ecma_parser = "12.0.0"
+swc_ecma_visit = "9.0.0"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter", "fmt"] }
