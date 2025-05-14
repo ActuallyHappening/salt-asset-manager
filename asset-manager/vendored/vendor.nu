@@ -1,5 +1,6 @@
 print ".... Getting deno to download the npm package for us ..."
-do --ignore-errors { deno run -A loads_dep.ts }
+rm -rf ../node_modules/
+do --ignore-errors { deno run -A loads_deps.ts }
 print ".... Errors above this are from deno run and should be expected and ignored"
 
 let $version = "0.99.954"

@@ -1,5 +1,5 @@
 import {
   signTx,
-} from "npm:@intuweb3/exp-node@.99.954";
+} from "npm:@intuweb3/exp-node@0.99.954";
 
 signTx()

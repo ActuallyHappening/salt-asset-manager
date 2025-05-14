@@ -2,6 +2,7 @@
   "version": "5",
   "specifiers": {
     "npm:@intuweb3/exp-node@*": "0.99.954",
+    "npm:@intuweb3/exp-node@0.99.954": "0.99.954",
     "npm:@intuweb3/web@*": "0.99.959",
     "npm:command-line-parser@*": "0.2.10",
     "npm:dotenv@*": "16.5.0",
