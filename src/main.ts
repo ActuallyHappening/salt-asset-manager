@@ -11,6 +11,7 @@ const config = await Config.newFromEnv(env);
 const publicAddress = await config.signer.getAddress();
 printRectangle(`ASSET MANAGER ${publicAddress.toUpperCase()} CONNECTED`);
 
+// CLI custom stuff only {{{
 let args = argsObj() as any;
 console.log("CLI args:", args);
 
@@ -145,6 +146,8 @@ if (args.useCliOnly === true) {
 	);
 	process.exit(0);
 }
+
+/// }}}
 
 // *** Start main user logic ***
 
